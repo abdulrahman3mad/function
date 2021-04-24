@@ -1,0 +1,11 @@
+{
+  "name": "function",
+  "version": "1.0.0",
+  "description": "A website in which you can upload ur awesome functions or watch others ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdulrahman Emad",
+  "license": "ISC"
+}

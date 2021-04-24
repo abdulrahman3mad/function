@@ -1,0 +1,41 @@
+@import "partials/_base";
+@import "partials/_header";
+
+form{
+    padding:1.5rem;
+    @include mq_min(769){
+        padding:1.5rem 7rem;
+    }
+    input{
+        margin-bottom:15px;
+    }
+    textarea{
+        border:1px solid rgb(197, 197, 197);
+        border-radius: 5px;
+        padding:1rem;
+        max-width: 100%;
+        outline:none;
+        color:$textColor;
+        background-color:rgb(241, 241, 241);
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        display: block;
+    }
+    textarea.description{
+        border:1px solid rgb(197, 197, 197);
+        background-color:rgb(241, 241, 241);
+        resize:vertical;
+        white-space: pre-wrap; //!understand
+        overflow-wrap: break-word; //!understand
+        outline:none;
+    }
+    label{
+        padding-top:1rem;
+        font-size:0.86rem;
+        display: block;
+    }
+    select{
+        margin-top:15px;
+    }
+}   
+

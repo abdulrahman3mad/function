@@ -1,0 +1,45 @@
+@import "partials/_base";
+@import "partials/_header";
+@import "partials/_functionDisplay";
+
+
+main{
+    padding:2rem 1rem;
+    @include mq_min(769){
+        padding:4rem 7rem;
+    }
+}
+.user_info{
+    margin-right:0.8rem;
+    @include flexRow();
+    .profile_img{
+        margin-right:1rem;
+        img{
+            width:60px;
+            height:60px;
+        }
+        @include mq_min(769){
+            img{
+                width:100px;
+                height:100px;
+            }
+        }
+    }
+    
+    .user_name{
+        line-height: 1.4;
+        font-weight: bold;
+        font-size:1rem;
+        @include mq_min(769){
+            font-size:1.2rem
+        }
+    }
+    .edit{
+        display: block;
+        font-size:0.7rem;
+    }
+}
+
+.functions_display{
+    padding:2rem 0 !important;
+}

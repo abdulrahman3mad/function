@@ -1,0 +1,58 @@
+@import "partials/_base";
+@import "partials/_header";
+
+
+main{
+    padding:0 4rem;    
+    border-bottom: 1px solid rgb(187, 187, 187); 
+    @include flexColumn();
+    span{
+        position: absolute;
+        top:107px;
+        left:20px;
+        @include mq(769){
+            top:137px;
+            left:460px;
+            font-size:1.5rem
+        }
+        font-size: 1.2rem;
+    }
+    h1{
+        color:$accentColor;
+        font-size:8rem;
+        height: 180px;
+        @include mq(769){
+            font-size:11rem;
+            height: 240px;
+        }
+    }
+    p{
+        font-size:1.2rem;
+        @include mq(769){
+            font-size:1.5rem;
+        }
+        font-weight: bold;
+        color: $accentColor;
+    }
+}
+form{
+    padding:2.5rem 2rem;    
+    @include mq(769){
+        padding:2.5rem 8rem
+    }
+    label{
+        color:$textColor;
+        display: block;
+        @include mq(769){
+            font-size:1.2rem
+        }
+    }
+    input{
+        width:200px;
+        @include mq(769){
+            width:70vw;
+            font-size: 1.3rem;
+            padding:3px;
+        }
+    }
+}

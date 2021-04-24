@@ -1,0 +1,67 @@
+@import "partials/_base";
+@import "partials/_header";
+
+
+main{
+    padding:1.5rem 1rem;
+    margin: auto;
+    @include mq(769){
+        padding:1.5rem 8rem;
+        width:100vw
+    }
+    width:300px;
+    .function_info{
+        @include flexRow();
+        justify-content:space-between;
+    }
+    .function_name{
+        font-size:0.6rem;      
+    }
+    .function_lang{
+        font-size:0.6rem;
+        color:$accentColor;
+        font-weight:bold
+    }
+    table{
+        padding:1rem;
+        white-space: nowrap;
+    }
+    .function_area{
+        border-radius: 5px;
+        overflow-x:auto;
+        overflow-y: hidden;
+        line-height: 1.4rem;
+        border:1px solid rgb(209, 209, 209);
+        font-size:0.8rem;
+        color:rgb(92, 92, 92);
+        .li_count{
+            color:rgb(168, 168, 168);
+            padding-right:15px;
+            font-size:0.75rem
+        }
+        span.pre_var{
+            
+            word-spacing: 0.5rem !important;
+        }
+        
+        .pre_var{
+            color:red
+        }
+        .method_name_key{
+            color:$accentColor
+        }
+    }
+}
+
+.implementer_info{
+    padding-top:1rem;
+    @include flexRow();
+    align-items: center;
+    .img_container{
+        margin:10px 10px 0 0;
+    }
+    .implementer_name{
+        padding-top:0.5rem;
+        font-size:0.6rem
+    }
+}

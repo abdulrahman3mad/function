@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dist/css/implement.min.css">
+  <title>Function</title>
+</head>
+
+<body>
+  <header class="main_header" id="main_header">
+    <ul>
+      <li class="logo"><a href="home.html">Function ( )</a></li>
+      <li class="implement none"><a href="implement.html" >Implement +</a></li>
+    </ul>
+    <ul>
+      <li class="login none"><a href="login.html">Log in</a></li>
+      <li class="signup none"><a href="signup.html">Sign Up</a></li>
+      <li>
+        <div class="personal_img img_container">
+          <a href="profile.html">
+            <img src="images/user2.jpeg" alt="profile image">
+          </a>
+          <i class="fas fa-caret-down none"></i>
+        <div>
+      </li>
+      <li class="dropdown_list none" id="dropdown_list" >
+        <div class="profile">
+          <a href="profile.html">My Profile</a>
+        </div>
+        <div class="implement">
+          <a href="implement.html">Implement+</a>
+        </div>
+        <div class="">
+          <a href="login.html">Sign out</a>
+        </div>
+      </li>
+      <li class="logout none"><a href="login.html">Sign out</a></li>
+    </ul>
+  </header>
+  <form action="" method="POST">
+    <input type="text" placeholder="function name">
+    <!--  <label for="functionContent">* Maximum size of a function is 15 lines</label>-->
+      <textarea name="functionContent" id="functionContent" cols="70" rows="19" placeholder="Write your function here"
+        wrap="off">
+            </textarea>
+
+    <div class="description">
+      <label for="description">Description</label>
+      <textarea name="description" class="description" id="description" cols="34" rows="4" ></textarea>
+    </div>
+    <select name="Lang" id="Lang">
+      <option value="cpluspluas">C++</option>
+      <option value="csharp">C#</option>
+      <option value="python">Python</option>
+      <option value="java">Java</option>
+      <option value="c">C</option>
+    </select>
+    <button type="submit">Set</button>
+  </form>
+  <script defer>
+  </script>
+</body>
+
+</html>
