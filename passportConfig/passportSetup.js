@@ -2,6 +2,7 @@ const passport = require("passport");
 const githubStrategy = require("passport-github2")
 const config = require("./config.js")
 const User = require("../models/userModel");
+const dotenv = require("dotenv").config()
 
 
 const creatUser = async (data, done) => {
@@ -28,8 +29,8 @@ passport.deserializeUser(async (id, done)=>{
 })
 
 passport.use(new githubStrategy({
-    clientID: config.github.clientID,
-    clientSecret: config.github.clientSecret,
+    clientID: process.env.clientID,
+    clientSecret: process.env.clientSecret,
     callbackURL: "http://localhost:5000/auth/github/callback",
 },async (accessToken, refreshToken, data, done)=>{
     creatUser(data, done)
