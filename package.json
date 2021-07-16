@@ -4,7 +4,7 @@
   "description": "A website in which you can upload ur awesome functions or watch others ",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "author": "Abdulrahman Emad",
   "license": "ISC",
