@@ -31,7 +31,7 @@ passport.deserializeUser(async (id, done)=>{
 passport.use(new githubStrategy({
     clientID: process.env.clientID,
     clientSecret: process.env.clientSecret,
-    callbackURL: "http://localhost:5000/auth/github/callback",
+    callbackURL: "https://getfunction.herokuapp.com/auth/github/callback",
 },async (accessToken, refreshToken, data, done)=>{
     creatUser(data, done)
 }))
