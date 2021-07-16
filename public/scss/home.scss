@@ -1,0 +1,17 @@
+@import "partials/_base";
+@import "partials/_header";
+@import "partials/_functionDisplay";
+
+.function_search{
+    padding:1rem;
+    @include mq_min(769){
+        padding:4rem 6.56rem 2rem;
+    }
+}
+
+
+button[type="submit"]{
+    display: inline-block;
+    padding:2.5px 10px;
+    font-size:0.75rem
+  }

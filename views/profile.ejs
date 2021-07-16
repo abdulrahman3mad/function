@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/profile.min.css">
+    <title>Function</title>
+</head>
+<body>
+    <%-include("partials/header.ejs")%>
+      <main>
+        <section class="user_info">
+          <div class="profile_img img_container">
+              <img src="images/user2.jpeg" alt="profile image">
+          </div>
+          <div class="text">
+            <p class="user_name"><%=user.name%></p>
+            <span class="edit link"><a href="/<%=user.name%>/edit">Edit Profile</a></span>
+          </div>
+        </section>
+        <section class="implemented_functions functions_display">
+        <%functions.forEach((function_box) => {%>
+          <article class="function">
+            <a href="/<%=function_box._id%>">
+              <header class="function_title">
+                <h1><%=function_box.name%></h1>
+              </header>
+              <p class="function_info"><%=function_box.description%></p>
+              <span class="function_lang"><%=function_box.lang%></span>
+            </a>
+          </article>   
+        <%})%>
+          <section>
+      </main>
+      <script defer src="Js/header.js"></script>
+</body>
+</html>

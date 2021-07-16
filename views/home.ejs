@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/css/home.min.css"> 
+    <title>Function</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <section class="function_search">
+      <form action="/" method="GET">
+        <input type="text" placeholder="Function name" name="name">
+        <select name="lang" id="searchSelect">
+          <option value="all">All</option>
+          <option value="C++">C++</option>
+          <option value="C##">C#</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="C">C</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+    
+    <section class="functions_display">
+      <%functions.forEach((function_box)=>{%>
+          <article class="function">
+            <a href="/function/<%=function_box.name%>">
+              <header class="function_name">
+                <h1><%=function_box.name%></h1>
+              </header>
+              <p class="function_info"><%=function_box.description%></p>
+              <span class="function_lang">'<%=function_box.lang%>'</span>
+            </a>
+          </article>  
+        <%})%>
+    </section>
+    <script defer src="Js/header.js"></script>
+  </body>
+</html>

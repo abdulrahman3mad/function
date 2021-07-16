@@ -1,0 +1,34 @@
+<header class="main_header" id="main_header">
+    <ul>
+      <li class="logo"><a href="/">Function ( )</a></li>
+      <li class="implement none"><a href="/function/implement">Implement +</a></li>
+    </ul>
+    <ul>
+      <%if(!user){%>
+      <li class="login"><a href="/auth/login">Log in</a></li>
+      <li class="signup"><a href="/auth/signup">Sign Up</a></li>
+      <%}%>
+      <%if(user){%>
+      <li>
+        <div class="personal_img img_container">
+          <a href="/<%=user.name%>">
+            <img src="/images/user2.jpeg" alt="profile image">
+          </a>
+          <i class="fas fa-caret-down none"></i>
+        <div>
+      </li>
+      <li class="dropdown_list none" id="dropdown_list">
+        <div class="profile">
+          <a href="/profile">My Profile</a>
+        </div>
+        <div class="implement">
+          <a href="/function/implement">Implement+</a>
+        </div>
+        <div class="">
+          <a href="/auth/logout">Sign out</a>
+        </div>
+      </li>
+      <li class="logout none"><a href="/auth/logout">Sign out</a></li>
+      <%}%>
+    </ul>
+  </header>

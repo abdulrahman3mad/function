@@ -1,0 +1,94 @@
+@import "partials/_base";
+
+.logo{
+    font-size:1.3rem;
+    padding:0 2rem;
+    @include mq_min(769){
+        padding:0 4rem;
+        font-size:1.5rem;
+    }
+    margin-top:1rem;
+}
+
+
+main{
+    @include flexColumn();
+    justify-items: center;
+    justify-content: center;
+    margin:150px 0;
+/*
+    label, input{
+        display: block;
+    }
+    label{
+        font-size:0.8rem;
+    }
+    input{
+        width:180px;
+        padding:0.2rem;
+        margin-bottom:0.3rem;
+        @include mq_min(769){
+            width:240px;
+        }
+    }
+    button{
+        margin-top:0.8rem;
+        background-color:$accentColor;
+        color:white;
+        border:none;
+        outline: none;
+        padding:0.2rem 0;
+        width:180px;
+        cursor: pointer;
+        @include mq_min(769){
+            width:240px;
+        }
+    }
+    */
+    p{
+        font-size:0.7rem;
+        word-spacing: 0.03rem;
+        margin-top:0.4rem;
+        @include mq_min(769){
+            font-size:0.9rem;
+        }
+        a{
+            color:rgb(20, 152, 240)
+        }
+
+    }
+    .auth{
+        text-align:center;
+        padding:10px 50px;
+        margin-bottom:8px;        
+        font-size:0.8rem;
+        border-radius: 5px;
+        cursor: pointer;
+        @include mq_min(769){
+            padding:15px 100px;
+            font-size:1rem;
+        }
+        a{
+            font-weight: bold;
+            color:white;
+        }
+    }
+
+    .fab{
+        color:rgb(255, 255, 255);
+        padding-right: 10px;
+        font-size:20px;
+    }   
+    .githubAuth{
+        background:#2c2c2c;
+        &:hover{
+            background:rgb(26, 26, 26) !important;
+        }
+    }
+    .twitterAuth {
+        background-color:#1DA1F2;
+        &:hover{
+            background-color:#1791dd;
+        }
+    }
+}

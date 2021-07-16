@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/implement.min.css">
+  <title>Function</title>
+</head>
+
+<body>
+  <%- include("partials/header") %>
+  <form action="/function/implement" method="POST">
+    <input type="text" name="name" placeholder="function name" required>
+    <!--  <label for="functionContent">* Maximum size of a function is 15 lines</label>-->
+      <textarea name="content" id="content" cols="70" rows="19" placeholder="Write your function here"
+        wrap="off" required>
+            </textarea>
+
+    <div class="description">
+      <label for="description">Description</label>
+      <textarea name="description" class="description" id="description" cols="34" rows="4" required></textarea>
+    </div>
+    <select name="lang" id="lang" name="lang">
+      <option value="C++">C++</option>
+      <option value="C##">C#</option>
+      <option value="Python">Python</option>
+      <option value="Java">Java</option>
+      <option value="C">C</option>
+    </select>
+    <button type="submit">Set</button>
+  </form>
+  <script>
+      const content = document.getElementById("content")
+      window.addEventListener("load", () => {
+        content.value = ""
+        content.focus()
+      });    
+  </script>
+  <script defer src="/Js/header.js"></script>
+</body>
+</html>
