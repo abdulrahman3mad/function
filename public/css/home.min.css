@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -11,9 +12,13 @@ body {
   color: #4d4d4d;
 }
 
-.functions_display .function, header.main_header .dropdown_list, header.main_header li, header.main_header {
+header.main_header, header.main_header li, header.main_header .dropdown_list, .functions_display .function {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
@@ -21,11 +26,13 @@ body {
   font-size: 1rem;
   color: #666666;
 }
+
 @media screen and (min-width: 769px) {
   .logo {
     font-size: 1.2rem;
   }
 }
+
 .logo a {
   color: #4d4d4d;
 }
@@ -37,8 +44,11 @@ ul {
 .none {
   display: none !important;
 }
+
 @media screen and (min-width: 769px) {
   .none {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -56,6 +66,7 @@ input {
   width: 100px;
   border: 1px solid #bebebe;
 }
+
 @media screen and (min-width: 769px) {
   input {
     width: 150px;
@@ -67,6 +78,7 @@ select {
   width: 50px;
   border: 1px solid #bebebe;
 }
+
 @media screen and (min-width: 769px) {
   select {
     width: 80px;
@@ -92,12 +104,13 @@ input:focus, select:focus, textarea:focus {
 img {
   height: 20px;
   width: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
 }
 
-button[type=submit] {
+button[type="submit"] {
   display: block;
   margin-top: 20px;
   background-color: #6977E1;
@@ -109,44 +122,67 @@ button[type=submit] {
 }
 
 header.main_header {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid #a0a0a0;
   font-size: 0.7rem;
   padding: 0.6rem;
 }
+
 @media screen and (min-width: 769px) {
   header.main_header {
     padding: 0.3rem 6rem;
   }
 }
+
 header.main_header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header.main_header li {
   margin: 0 10px;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 header.main_header li a {
   color: #6977E1;
 }
+
 header.main_header li a:hover {
   color: #4d5bc8;
 }
+
 header.main_header li.signup {
   background-color: #6977E1;
   padding: 2px 10px;
   border-radius: 10px;
 }
+
 header.main_header li.signup a {
   color: white;
 }
+
 header.main_header .fa-caret-down {
   font-size: 0.9rem;
 }
+
 header.main_header .dropdown_list {
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 0.8rem;
   padding: 5px 1.5rem;
   background-color: #F6F8FA;
@@ -157,6 +193,7 @@ header.main_header .dropdown_list {
   left: 0%;
   margin: 0;
 }
+
 header.main_header .dropdown_list div:not(:last-child) {
   width: 100%;
   border-bottom: 0.2px solid #cccccc;
@@ -164,6 +201,8 @@ header.main_header .dropdown_list div:not(:last-child) {
 
 @media screen and (min-width: 769px) {
   .implement.none, .logout.none {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 }
@@ -176,29 +215,42 @@ header.main_header .dropdown_list div:not(:last-child) {
 
 .functions_display {
   padding: 1.2rem;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 @media screen and (min-width: 769px) {
   .functions_display {
-    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
     padding: 0 6.5rem;
     grid-gap: 15px;
   }
 }
+
 .functions_display .function {
   background: #FAF8F6;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   border: 1px solid #cfcfcf;
   padding: 0 1rem;
   margin-bottom: 20px;
 }
+
 .functions_display .function:hover {
-  transform: scale(1.005);
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
 }
+
 .functions_display .function .function_name {
   position: relative;
   bottom: 15px;
@@ -207,49 +259,61 @@ header.main_header .dropdown_list div:not(:last-child) {
   max-width: 140px;
   margin: auto;
 }
+
 .functions_display .function .function_name h1 {
   padding: 0 1rem;
   color: black !important;
   font-size: 1rem;
 }
+
 @media screen and (min-width: 769px) {
   .functions_display .function .function_name h1 {
     padding: 0 1rem;
     font-size: 1.2rem;
   }
 }
+
 .functions_display .function .function_info {
   font-size: 0.65rem;
   color: #1f1f1f;
 }
+
 @media screen and (min-width: 769px) {
   .functions_display .function .function_info {
     font-size: 0.8rem;
   }
 }
+
 .functions_display .function .function_lang {
   font-size: 0.55rem;
   color: #6977E1;
 }
+
 @media screen and (min-width: 769px) {
   .functions_display .function .function_lang {
     font-size: 0.7rem;
   }
 }
 
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  border-top: 1px solid #d2d2d2;
+}
+
 .function_search {
   padding: 1rem;
 }
+
 @media screen and (min-width: 769px) {
   .function_search {
     padding: 4rem 6.56rem 2rem;
   }
 }
 
-button[type=submit] {
+button[type="submit"] {
   display: inline-block;
   padding: 2.5px 10px;
   font-size: 0.75rem;
 }
-
 /*# sourceMappingURL=home.min.css.map */

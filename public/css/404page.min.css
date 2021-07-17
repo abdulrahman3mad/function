@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -11,9 +12,13 @@ body {
   color: #4d4d4d;
 }
 
-main, header.main_header .dropdown_list, header.main_header li, header.main_header {
+header.main_header, header.main_header li, header.main_header .dropdown_list, main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
@@ -21,11 +26,13 @@ main, header.main_header .dropdown_list, header.main_header li, header.main_head
   font-size: 1rem;
   color: #666666;
 }
+
 @media screen and (min-width: 769px) {
   .logo {
     font-size: 1.2rem;
   }
 }
+
 .logo a {
   color: #4d4d4d;
 }
@@ -37,8 +44,11 @@ ul {
 .none {
   display: none !important;
 }
+
 @media screen and (min-width: 769px) {
   .none {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -56,6 +66,7 @@ input {
   width: 100px;
   border: 1px solid #bebebe;
 }
+
 @media screen and (min-width: 769px) {
   input {
     width: 150px;
@@ -67,6 +78,7 @@ select {
   width: 50px;
   border: 1px solid #bebebe;
 }
+
 @media screen and (min-width: 769px) {
   select {
     width: 80px;
@@ -92,12 +104,13 @@ input:focus, select:focus, textarea:focus {
 img {
   height: 20px;
   width: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
 }
 
-button[type=submit] {
+button[type="submit"] {
   display: block;
   margin-top: 20px;
   background-color: #6977E1;
@@ -109,44 +122,67 @@ button[type=submit] {
 }
 
 header.main_header {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid #a0a0a0;
   font-size: 0.7rem;
   padding: 0.6rem;
 }
+
 @media screen and (min-width: 769px) {
   header.main_header {
     padding: 0.3rem 6rem;
   }
 }
+
 header.main_header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header.main_header li {
   margin: 0 10px;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 header.main_header li a {
   color: #6977E1;
 }
+
 header.main_header li a:hover {
   color: #4d5bc8;
 }
+
 header.main_header li.signup {
   background-color: #6977E1;
   padding: 2px 10px;
   border-radius: 10px;
 }
+
 header.main_header li.signup a {
   color: white;
 }
+
 header.main_header .fa-caret-down {
   font-size: 0.9rem;
 }
+
 header.main_header .dropdown_list {
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 0.8rem;
   padding: 5px 1.5rem;
   background-color: #F6F8FA;
@@ -157,6 +193,7 @@ header.main_header .dropdown_list {
   left: 0%;
   margin: 0;
 }
+
 header.main_header .dropdown_list div:not(:last-child) {
   width: 100%;
   border-bottom: 0.2px solid #cccccc;
@@ -164,6 +201,8 @@ header.main_header .dropdown_list div:not(:last-child) {
 
 @media screen and (min-width: 769px) {
   .implement.none, .logout.none {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 }
@@ -177,14 +216,19 @@ header.main_header .dropdown_list div:not(:last-child) {
 main {
   padding: 0 4rem;
   border-bottom: 1px solid #bbbbbb;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 main span {
   position: absolute;
   top: 107px;
   left: 20px;
   font-size: 1.2rem;
 }
+
 @media screen and (min-width: 769px) {
   main span {
     top: 137px;
@@ -192,22 +236,26 @@ main span {
     font-size: 1.5rem;
   }
 }
+
 main h1 {
   color: #6977E1;
   font-size: 8rem;
   height: 180px;
 }
+
 @media screen and (min-width: 769px) {
   main h1 {
     font-size: 11rem;
     height: 240px;
   }
 }
+
 main p {
   font-size: 1.2rem;
   font-weight: bold;
   color: #6977E1;
 }
+
 @media screen and (min-width: 769px) {
   main p {
     font-size: 1.5rem;
@@ -217,23 +265,28 @@ main p {
 form {
   padding: 2.5rem 2rem;
 }
+
 @media screen and (min-width: 769px) {
   form {
     padding: 2.5rem 8rem;
   }
 }
+
 form label {
   color: #4d4d4d;
   display: block;
 }
+
 @media screen and (min-width: 769px) {
   form label {
     font-size: 1.2rem;
   }
 }
+
 form input {
   width: 200px;
 }
+
 @media screen and (min-width: 769px) {
   form input {
     width: 70vw;
@@ -241,5 +294,4 @@ form input {
     padding: 3px;
   }
 }
-
 /*# sourceMappingURL=404page.min.css.map */

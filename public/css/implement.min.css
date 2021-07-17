@@ -213,6 +213,12 @@ header.main_header .dropdown_list div:not(:last-child) {
   }
 }
 
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  border-top: 1px solid #d2d2d2;
+}
+
 form {
   padding: 1.5rem;
 }
