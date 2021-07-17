@@ -2,6 +2,8 @@
 let function_name = document.getElementById("function_name")
 let function_area = document.getElementById("function_table")
 let function_lang = document.getElementById("function_lang")
+const tokens = ["void", "return", "const", "let", "var", "split", "trim", "await", "async", "document", "forEach", "document"]
+const dataTypes = ["int", "string", "String", "let", "var", "float", "double"];
 
 document.addEventListener("readystatechange", (e) => {
     if(document.readyState == "complete"){
@@ -29,7 +31,6 @@ const setData = async (result) => {
 
 const modifyContent = async (content) => {
     contentArray = await content.trim().split(/\n/)
-    const tokens = ["void", "return", "const", "let", "var", "split", "trim", "await", "async", "document", "forEach", "document"]
     contentArray.forEach((data, index) => {
         row = document.createElement("tr")
         statementColumn = document.createElement("td")
@@ -47,25 +48,31 @@ const modifyContent = async (content) => {
         data = data.split(regex)
         console.log(data)
         data.forEach(word => {
-            setRowData(word, tokens)
+            setRowData(word)
         })
     })
 }
 
-const setRowData = (word, tokens) => {
+const setRowData = (word) => {
     span = document.createElement("span")
     span.textContent = word
     statementColumn.append(span)
     if(word == "="){
         span.style.padding="5px"
     }
-    setRowPersonality(word,tokens)
+    setRowPersonality(word)
 }
 
-const setRowPersonality = (word, tokens) => {
+const setRowPersonality = (word) => {
     tokens.forEach(token => {
         if(word == token){
             span.classList.add("token")
         }     
     })
+    dataTypes.forEach(dataType => {
+        if(word == dataType){
+            span.classList.add("dataType")
+        }     
+    })
 } 
+

@@ -2,10 +2,10 @@ const functions = require("../models/functionModel")
 
 const search = (req, res) => {
     let searchResult = {}
-    if(req.query.name!=undefined&&req.query.name!=""){
+    if(req.query.name!=undefined && req.query.name!=""){
         searchResult.name = new RegExp(req.query.name, "i")
     }
-    if(req.query.lang!=undefined&&req.query.lang!="all"){
+    if(req.query.lang!=undefined && req.query.lang!="all"){
         searchResult.lang = req.query.lang
     }
     return searchResult
@@ -21,5 +21,5 @@ const get_home_page = async (req, res) => {
 }
 
 module.exports = {
-    get_home_page
+    get_home_page,
 }

@@ -29,9 +29,9 @@ main{
     .user_name{
         line-height: 1.4;
         font-weight: bold;
-        font-size:1rem;
+        font-size:1.2rem;
         @include mq_min(769){
-            font-size:1.2rem
+            font-size:1.4rem
         }
     }
     .edit{
@@ -42,4 +42,9 @@ main{
 
 .functions_display{
     padding:2rem 0 !important;
+}
+
+.emptycase_message{
+    font-size:3;
+    text-align: center;
 }

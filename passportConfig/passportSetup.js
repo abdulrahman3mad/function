@@ -6,12 +6,12 @@ const dotenv = require("dotenv").config()
 
 
 const creatUser = async (data, done) => {
- const realUser = await User.findOne()
+ const realUser = await User.findOne({_id: data._id})
       if(realUser){
         done(null, realUser)  
       }else{
         const user = new User({
-            name: data.displayName, 
+            name: data.username, 
             githubID: data.id,
         })
         await user.save()
@@ -29,9 +29,10 @@ passport.deserializeUser(async (id, done)=>{
 })
 
 passport.use(new githubStrategy({
-    clientID: process.env.clientID,
+    clientID: process.env.clientID, 
     clientSecret: process.env.clientSecret,
-    callbackURL: "https://getfunction.herokuapp.com/auth/github/callback",
+    callbackURL: "http://localhost:5000/auth/github/callback",
 },async (accessToken, refreshToken, data, done)=>{
+    console.log(data)
     creatUser(data, done)
 }))

@@ -11,9 +11,14 @@
       <%if(user){%>
       <li>
         <div class="personal_img img_container">
-          <a href="/<%=user.name%>">
+          
+          <a href="/profile/<%=user.name%>">
+            <h3><%=user.name%></h3>
+            <!--
             <img src="/images/user2.jpeg" alt="profile image">
+            -->
           </a>
+    
           <i class="fas fa-caret-down none"></i>
         <div>
       </li>

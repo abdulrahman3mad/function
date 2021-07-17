@@ -4,6 +4,7 @@ const userSchema = mongoose.Schema({
     name: String, 
     password: String,
     githubID: String,
+    bio: String,
     publishedFunctions: []
 })
 

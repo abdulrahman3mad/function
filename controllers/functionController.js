@@ -11,7 +11,8 @@ const post_function = async (req, res) => {
         name: req.body.name,
         content: req.body.content,
         description: req.body.description,
-        lang: req.body.lang
+        lang: req.body.lang,
+        author: req.user.name
     })
     try{
         await func.save()
@@ -27,9 +28,7 @@ const post_function = async (req, res) => {
 
 const get_data = async (req, res) => {
     try{
-        const function_name = req.params.name
-        console.log(function_name);
-        const func = await functions.findOne({name: function_name})
+        const func = await functions.findOne({_id: req.params.id})
         res.send(func)
     }catch(err){
         console.log(err)
@@ -39,9 +38,8 @@ const get_data = async (req, res) => {
 
 const get_function = async (req, res) => {
     try{
-        const singalFunction = await functions.findOne({name: req.params.name})
-        console.log(singalFunction)
-        const visitor = await User.findOne({publishedFunctions: singalFunction._id})
+        const receivedFunction = await functions.findOne({_id: req.params.id})
+        const visitor = await User.findOne({publishedFunctions: receivedFunction._id})
         res.render("function.ejs", {user: req.user, visitor: visitor })
     }catch(err){
         console.log(err)

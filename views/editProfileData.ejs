@@ -12,14 +12,12 @@
 <body>
     <%- include("partials/header") %>
       <main>
-          <form action="/profile">
+          <form action="/profile/<%=user.name%>" method="POST">
               <div class="text_form">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Abdulrahman">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="*****">
-                <label for="bio">Bio</label>
-                <textarea name="bio" id="bio" cols="20" rows="10" placeholder="I am a software developer"></textarea>
+                <input type="text" id="name" name="name" value="<%=user.name%>" placeholder="Abdulrahman">
+                 <label for="bio">Bio</label>
+                <textarea name="bio" id="bio" cols="10" maxlength="30" rows="3" placeholder="I am a software developer"><%=user.bio%></textarea>
                 <button type="submit">Set</button>
               </div>
               <!--

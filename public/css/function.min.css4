@@ -206,7 +206,7 @@ main .function_area {
   overflow-y: hidden;
   line-height: 1.4rem;
   border: 1px solid #d1d1d1;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #5c5c5c;
 }
 main .function_area .li_count {
@@ -216,10 +216,6 @@ main .function_area .li_count {
 }
 main .function_area .token {
   color: #c21e1e;
-  padding: 0 5px;
-}
-main .function_area .dataType {
-  color: blue;
   padding: 0 5px;
 }
 main .function_area .comment {
@@ -238,4 +234,4 @@ main .function_area .comment {
   font-size: 0.6rem;
 }
 
-/*# sourceMappingURL=function.min.css.map */
+/*# sourceMappingURL=function.min.css4.map */

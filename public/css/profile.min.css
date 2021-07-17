@@ -199,8 +199,7 @@ header.main_header .dropdown_list div:not(:last-child) {
 .functions_display .function:hover {
   transform: scale(1.005);
 }
-.functions_display .function .function_title {
-  font-size: 0.62rem;
+.functions_display .function .function_name {
   position: relative;
   bottom: 15px;
   background: white;
@@ -208,15 +207,15 @@ header.main_header .dropdown_list div:not(:last-child) {
   max-width: 140px;
   margin: auto;
 }
-.functions_display .function .function_title h1 {
-  padding: 0 0.4rem;
+.functions_display .function .function_name h1 {
+  padding: 0 1rem;
+  color: black !important;
+  font-size: 1rem;
 }
 @media screen and (min-width: 769px) {
-  .functions_display .function .function_title {
-    font-size: 0.7rem;
-  }
-  .functions_display .function .function_title h1 {
-    padding: 0 0.6rem;
+  .functions_display .function .function_name h1 {
+    padding: 0 1rem;
+    font-size: 1.2rem;
   }
 }
 .functions_display .function .function_info {
@@ -266,11 +265,11 @@ main {
 .user_info .user_name {
   line-height: 1.4;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 @media screen and (min-width: 769px) {
   .user_info .user_name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 .user_info .edit {
@@ -280,6 +279,11 @@ main {
 
 .functions_display {
   padding: 2rem 0 !important;
+}
+
+.emptycase_message {
+  font-size: 3;
+  text-align: center;
 }
 
 /*# sourceMappingURL=profile.min.css.map */

@@ -13,9 +13,6 @@ const functionSchema = mongoose.Schema({
     lang: {
         type:String
     },
-    author: {
-        type:String
-    }
 })
 
 const functionModel = mongoose.model("function", functionSchema)

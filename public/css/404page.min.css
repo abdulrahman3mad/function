@@ -11,7 +11,7 @@ body {
   color: #4d4d4d;
 }
 
-.implementer_info, main .function_info, header.main_header .dropdown_list, header.main_header li, header.main_header {
+main, header.main_header .dropdown_list, header.main_header li, header.main_header {
   display: flex;
   align-items: center;
 }
@@ -175,67 +175,71 @@ header.main_header .dropdown_list div:not(:last-child) {
 }
 
 main {
-  padding: 1.5rem 1rem;
-  margin: auto;
-  width: 300px;
+  padding: 0 4rem;
+  border-bottom: 1px solid #bbbbbb;
+  flex-direction: column;
+}
+main span {
+  position: absolute;
+  top: 107px;
+  left: 20px;
+  font-size: 1.2rem;
 }
 @media screen and (min-width: 769px) {
-  main {
-    padding: 1.5rem 8rem;
-    width: 100vw;
+  main span {
+    top: 137px;
+    left: 460px;
+    font-size: 1.5rem;
   }
 }
-main .function_info {
-  justify-content: space-between;
-}
-main .function_name {
-  font-size: 0.6rem;
-}
-main .function_lang {
-  font-size: 0.6rem;
+main h1 {
   color: #6977E1;
+  font-size: 8rem;
+  height: 180px;
+}
+@media screen and (min-width: 769px) {
+  main h1 {
+    font-size: 11rem;
+    height: 240px;
+  }
+}
+main p {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #6977E1;
 }
-main table {
-  padding: 1rem;
-  white-space: nowrap;
-}
-main .function_area {
-  border-radius: 5px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  line-height: 1.4rem;
-  border: 1px solid #d1d1d1;
-  font-size: 1rem;
-  color: #5c5c5c;
-}
-main .function_area .li_count {
-  color: #a8a8a8;
-  padding-right: 15px;
-  font-size: 0.75rem;
-}
-main .function_area .token {
-  color: #c21e1e;
-  padding: 0 5px;
-}
-main .function_area .dataType {
-  color: blue;
-  padding: 0 5px;
-}
-main .function_area .comment {
-  color: #085708;
+@media screen and (min-width: 769px) {
+  main p {
+    font-size: 1.5rem;
+  }
 }
 
-.implementer_info {
-  padding-top: 1rem;
-  align-items: center;
+form {
+  padding: 2.5rem 2rem;
 }
-.implementer_info .img_container {
-  margin: 10px 10px 0 0;
+@media screen and (min-width: 769px) {
+  form {
+    padding: 2.5rem 8rem;
+  }
 }
-.implementer_info .implementer_name {
-  padding-top: 0.5rem;
-  font-size: 0.6rem;
+form label {
+  color: #4d4d4d;
+  display: block;
+}
+@media screen and (min-width: 769px) {
+  form label {
+    font-size: 1.2rem;
+  }
+}
+form input {
+  width: 200px;
+}
+@media screen and (min-width: 769px) {
+  form input {
+    width: 70vw;
+    font-size: 1.3rem;
+    padding: 3px;
+  }
 }
 
-/*# sourceMappingURL=function.min.css.map */
+/*# sourceMappingURL=404page.min.css.map */

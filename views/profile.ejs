@@ -13,18 +13,30 @@
     <%-include("partials/header.ejs")%>
       <main>
         <section class="user_info">
+          <!--
           <div class="profile_img img_container">
               <img src="images/user2.jpeg" alt="profile image">
           </div>
+          -->
           <div class="text">
-            <p class="user_name"><%=user.name%></p>
-            <span class="edit link"><a href="/<%=user.name%>/edit">Edit Profile</a></span>
+            <p class="user_name"><%=visitor.name%></p>
+            <div>
+              <%=user.bio%>
+            </div>
+            <%if(visitor.name == user.name){%>
+            <span class="edit link"><a href="/profile/<%=user.name%>/edit">Edit Profile</a></span>
+            <%}%>
           </div>
         </section>
+        <%if(Object.keys(functions).length == 0){%>
+          <div class="emptycase_message">
+          <a href="/function/implement" >Publish your first function +</a>
+        </div>
+        <%}%>
         <section class="implemented_functions functions_display">
         <%functions.forEach((function_box) => {%>
           <article class="function">
-            <a href="/<%=function_box._id%>">
+            <a href="/function/<%=function_box._id%>">
               <header class="function_title">
                 <h1><%=function_box.name%></h1>
               </header>
@@ -33,7 +45,7 @@
             </a>
           </article>   
         <%})%>
-          <section>
+        </section>
       </main>
       <script defer src="Js/header.js"></script>
 </body>

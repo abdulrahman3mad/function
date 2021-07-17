@@ -31,7 +31,7 @@ main{
         overflow-y: hidden;
         line-height: 1.4rem;
         border:1px solid rgb(209, 209, 209);
-        font-size:0.9rem;
+        font-size:1rem;
         color:rgb(92, 92, 92);
         .li_count{
             color:rgb(168, 168, 168);
@@ -41,6 +41,10 @@ main{
         .token{
             color:rgb(194, 30, 30);
             padding: 0 5px
+        }
+        .dataType{
+            color:blue;
+            padding:0 5px;
         }
         .comment{
             color:rgb(8, 87, 8);
