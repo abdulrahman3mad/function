@@ -31,7 +31,6 @@ const get_data = async (req, res) => {
         const func = await functions.findOne({_id: req.params.id})
         res.send(func)
     }catch(err){
-        console.log(err)
         res.render("404page.ejs")
     }
 }
