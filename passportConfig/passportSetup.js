@@ -6,7 +6,7 @@ const dotenv = require("dotenv").config()
 
 
 const creatUser = async (data, done) => {
- const realUser = await User.findOne({_id: data._id})
+ const realUser = await User.findOne({githubID: data.githubID})
       if(realUser){
         done(null, realUser)  
       }else{
