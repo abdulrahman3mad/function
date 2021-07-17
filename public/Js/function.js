@@ -3,7 +3,7 @@ let function_name = document.getElementById("function_name")
 let function_area = document.getElementById("function_table")
 let function_lang = document.getElementById("function_lang")
 const tokens = ["void", "return", "const", "let", "var", "split", "trim", "await", "async", "document", "forEach", "document"]
-const dataTypes = ["int", "string", "String", "let", "var", "float", "double"];
+const dataTypes = ["boolean", "bool", "[]", ".", "int", "string", "String", "let", "var", "float", "double"];
 
 document.addEventListener("readystatechange", (e) => {
     if(document.readyState == "complete"){
