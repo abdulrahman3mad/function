@@ -39,7 +39,7 @@ app.use(passport.session())
 
 //routes
 app.use("/auth", authRouter)
-app.use("/", authMiddelware, profileRouter)
+app.use("/profile", authMiddelware, profileRouter)
 app.use("/", homeRouter)
 app.use("/function", authMiddelware, functionRouter)
 //----
