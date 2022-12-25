@@ -1,8 +1,6 @@
 # function
 A website in which you can upload ur awesome functions or watch others
 
-You can use this site from here: https://getfunction.herokuapp.com/
-
 
 ![Screenshot 2021-09-27 133306](https://user-images.githubusercontent.com/65741884/134900611-c002cdd8-a56e-4397-8512-68fadbb40d33.png)
 
